@@ -1,0 +1,36 @@
+//MOUSE TRAIL
+<!doctype html>
+
+<style>
+  .trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
+  body {
+    height: 300px;
+  }
+</style>
+
+
+<body>
+<script>
+  var array = [];
+  for (var i = 0; i < 7; i++) {
+    var node = document.createElement("div");      //neues Element div im Dokument von Klasse trail (erstellt im Loop)
+    node.className = "trail";
+    document.body.appendChild(node);               //so dass Element node sichtbar im Dokument ist(Kindelement von body)
+    array.push(node);                             //auch im Array hinzufügen
+  }
+  
+  var counter = 0;                                //counter/unser aktuelles Dot
+  
+  addEventListener("mousemove", function(event) {   //mousemove-Event wird bei weiterbewegter Maus ausgelöst.
+    var dot = array[ counter];                      //"Iteration" durch das Array 
+    dot.style.left = (event.pageX - 4) + "px";      //"Koordinaten" von dot
+    dot.style.top = (event.pageY - 4) + "px";
+    counter = (counter + 1) % array.length;
+  });
+</script>
+</body>
