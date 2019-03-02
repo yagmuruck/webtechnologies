@@ -1,4 +1,3 @@
-
 var circles = document.getElementsByClassName("circle");
 var text = document.getElementById("text");
 var startAgain = document.getElementById("start");
