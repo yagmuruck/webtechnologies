@@ -1,0 +1,21 @@
+<!-- Die Methode EventTarget.addEventListener() ermöglicht es mehrere Event-Handler zu einem Element hinzuzufügen.
+target.addEventListener(type, listener[, useCapture]);
+Der keyCode zeigt, welche Taste der Tastatur bei Eingaben in Formularen gedrückt wird
+-->
+//CENSORED KEYBOARD
+
+<input type="text">
+<script>
+  var input = document.querySelector("input");  //Gibt das erste input-Element innerhalb des Dokuments zurück
+  input.addEventListener("keydown", function(event) {    //unser Ereignis-typ ist keydown-Event      
+    if (event.keyCode == "Q".charCodeAt(0) ||            //charCodeAtliefert die Nummer der UTF-16-Zeicheneinheit zurück
+        event.keyCode == "W".charCodeAt(0) ||
+        event.keyCode == "X".charCodeAt(0))             //Falls ein von
+      event.preventDefault();                           
+  });
+</script>
+
+
+
+
+
