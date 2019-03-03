@@ -1,0 +1,79 @@
+#container{
+    background: lightgray;
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: 0 0 45px rgba(0,0,0, 0.5);
+}
+input{
+    padding: 10px;
+    background: lightgray;
+    border: none;
+    width: 100% ;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: RosyBrown;
+}
+
+input:focus {
+    background: white;
+}
+
+h1{
+    text-transform: uppercase;
+    background-color: RosyBrown;
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    color: white;
+    padding: 15px 10px 5px 10px;
+    font-weight: normal;
+    font-size: 30px;
+    
+}
+
+ul {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+li {
+    background: white;
+    line-height: 45px;
+}
+
+body {
+    background: white
+}
+
+li:nth-child(2n){
+    
+    background: lightgray;
+}
+
+.fa-pencil-alt {
+    float: right;
+  
+}
+
+span {
+    background-color: RosyBrown;
+    display: inline-block;
+    width: 0;
+    margin: 0 20px 0 0;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 0.5s linear;
+   
+}
+
+span:hover {
+    width: 45px;
+    opacity: 1.0;
+}
+
+.fa-pencil-alt:hover {
+    color: lightgray;
+}
